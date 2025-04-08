@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Well Wishes for Jaadu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://i.pinimg.com/originals/15/d0/79/15d07993b1df0389b66766dc2d9ea739.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+    .card {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 25px;
+      border-radius: 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    }
+    h1, h2, h3 {
+      color: #00ffff;
+    }
+    .icon {
+      font-size: 40px;
+    }
+    .gift-box {
+      background-color: #fff;
+      color: #000;
+      padding: 15px 30px;
+      border-radius: 15px;
+      font-weight: bold;
+      margin: 20px;
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .gift-box:hover {
+      transform: scale(1.1);
+    }
+    .hidden {
+      display: none;
+    }
+    .wishes {
+      font-size: 1.2em;
+      color: #00ffcc;
+      margin-top: 20px;
+    }
+    .vijay-bhawa {
+      font-size: 2em;
+      font-weight: bold;
+      color: gold;
+      margin-top: 30px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin: 10px 0;
+    }
+    .contact {
+      margin-top: 40px;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon"> 
+      <span>&#128125;</span> <!-- Alien Icon -->
+    </div>
+    <h1>All the Best Jaadu!</h1>
+    <h2>You are destined to crack this exam!</h2>
+    <img src="https://defencedirecteducation.com/wp-content/uploads/2018/12/Ada-squadrons-battalions-flags-e1636361795344.jpg" alt="NDA Officer">
+    <p>You've got this, future Lieutenant Officer!</p>
+  </div>  <div class="gift-box" onclick="startGift()">Click for Surprise</div>  <div id="giftMessage" class="card hidden">
+    <div class="wishes" id="finalMessage"></div>
+    <div class="vijay-bhawa hidden" id="vijay">VIJAY BHAWA</div>
+  </div>  <div class="contact">
+    <p>Contact: +91 8679869198</p>
+    <p>Email: ranamonty028@gmail.com</p>
+  </div>  <script>
+    function startGift() {
+      const q1 = prompt("What is your name?");
+      if (q1 && q1.toLowerCase() === "jaadu") {
+        const q2 = prompt("What is my code word?");
+        if (q2 && q2.toLowerCase() === "dumbo") {
+          const q3 = prompt("Enter the final code:");
+          if (q3 === "0622") {
+            document.getElementById("giftMessage").classList.remove("hidden");
+            document.getElementById("finalMessage").innerHTML = `
+              I believe in you, Jaadu.<br>
+              You will crack the exam.<br>
+              Just give it your best shot.<br>
+              I know you can do it!`;
+            document.getElementById("vijay").classList.remove("hidden");
+          } else {
+            alert("Incorrect code. Try again!");
+          }
+        } else {
+          alert("Incorrect code word. Try again!");
+        }
+      } else {
+        alert("Wrong name. Try again!");
+      }
+    }
+  </script></body>
+</html>
